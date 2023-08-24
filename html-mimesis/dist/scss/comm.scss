@@ -5,17 +5,21 @@
 // body {
 //     background: url(/html-mimesis/images/MAIN.png) no-repeat 50% 0;
 // }
-.inner {
+.wrap {
     max-width: 1920px;
     opacity: 1;
     overflow: hidden;
+    margin: 0 auto;
+}
+.inner {
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 .swiper-container {
     position: relative;
     margin-top: 130px;
-    max-width: 1240px;
+    max-width: 1280px;
     height: 480px;
     overflow: visible;
 }
@@ -87,12 +91,16 @@
 
 // main-section1
 .main-section-1 {
-    max-width: 1240px;
+    max-width: 1280px;
+    height: 50px;
     margin: 40px auto;
     position: relative;
     display: flex;
 
     .main-info-area {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: calc(100% - 300px);
         border-bottom: 3px solid #000000;
         padding-bottom: 30px;
@@ -101,9 +109,8 @@
         }
     }
     .info-link {
-        flex-grow: 1;
         position: absolute;
-        top: 7px;
+        top: 0px;
         right: 0;
         margin: auto;
         font-size: 26px;
@@ -118,7 +125,7 @@
                     width: 120px;
                     height: 3px;
                     background-color: #000000;
-                    margin-top: 31px;
+                    margin-top: 39px;
                 }
                 &:hover a {
                     color: #003993;
