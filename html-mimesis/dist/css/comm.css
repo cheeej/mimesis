@@ -274,7 +274,6 @@ legend {
 .wrap {
   max-width: 1920px;
   opacity: 1;
-  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -285,7 +284,6 @@ legend {
 
 .swiper-container {
   position: relative;
-  margin-top: 130px;
   max-width: 1280px;
   height: 480px;
   overflow: visible;
@@ -379,7 +377,9 @@ legend {
   padding-bottom: 30px;
 }
 .main-section-1 .main-info-area li {
+  vertical-align: text-top;
   display: flex;
+  align-items: center;
 }
 .main-section-1 .info-link {
   position: absolute;
@@ -401,13 +401,13 @@ legend {
   width: 120px;
   height: 3px;
   background-color: #000000;
-  margin-top: 39px;
+  margin-top: 38px;
 }
 .main-section-1 .info-link ul li:hover a {
-  color: #003993;
+  color: #0068f9;
 }
 .main-section-1 .info-link ul li:hover::after {
-  background-color: #003993;
+  background: #0068f9;
 }
 
 .info-tit {
@@ -415,4 +415,97 @@ legend {
 }
 .info-tit .info-txt {
   display: flex;
+}
+
+.main-section-2 {
+  margin-top: 100px;
+  position: relative;
+}
+.main-section-2 h2 {
+  font-size: 40px;
+}
+.main-section-2 .exhivition-con {
+  margin-top: 70px;
+  display: flex;
+}
+.main-section-2 .exhivition-con .con-img {
+  width: 30%;
+  height: 400px;
+  display: block;
+}
+.main-section-2 .exhivition-con .con-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #f3f3f3;
+}
+.main-section-2 .exhivition-con .txt-box {
+  width: 80%;
+  margin-left: 200px;
+  display: block;
+}
+.main-section-2 .exhivition-con .txt-box li {
+  position: relative;
+  margin-bottom: 60px;
+}
+.main-section-2 .exhivition-con .txt-box li .badge {
+  font-size: 15px;
+  display: inline-block;
+  min-width: 73px;
+  min-height: 31px;
+  padding: 2px 4px;
+  color: #fff;
+  background-color: #000000;
+  text-align: center;
+  border-radius: 7px;
+  font-weight: normal;
+  line-height: 2;
+  width: auto;
+  margin-right: 30px;
+}
+.main-section-2 .exhivition-con .txt-box li a {
+  font-size: 24px;
+  font-weight: 600;
+}
+.main-section-2 .exhivition-con .txt-box li p {
+  position: absolute;
+  top: 44px;
+  left: 114px;
+  font-size: 20px;
+}
+
+.circle-text {
+  width: 100%;
+}
+.circle-text .rotating-text1,
+.circle-text .rotating-text2 {
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  animation: rotate 10s linear infinite;
+  transform-origin: 50% 50%;
+  transition: all 1s;
+  fill: #0068f9;
+  zoom: 1.1;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.circle-text .rotating-text2 {
+  fill: #d4d4d4;
+  bottom: -15px;
+  right: 84px;
+  z-index: -1;
+  zoom: 1;
+}
+
+.main-section-3 {
+  width: 100%;
+  margin-top: 100px;
+  height: 900px;
+  background-color: #20231f;
+  overflow: visible;
 }/*# sourceMappingURL=comm.css.map */
