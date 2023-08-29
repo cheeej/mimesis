@@ -275,6 +275,7 @@ legend {
   max-width: 1920px;
   opacity: 1;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .inner {
@@ -361,95 +362,112 @@ legend {
   width: 60px;
 }
 
-.main-section-1 {
-  max-width: 1280px;
-  height: 50px;
-  margin: 40px auto;
-  position: relative;
-  display: flex;
-}
-.main-section-1 .main-info-area {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% - 300px);
-  border-bottom: 3px solid #000000;
+.slide-bottom {
+  padding-top: 40px;
   padding-bottom: 30px;
+  border-bottom: 2px solid #000000;
+  position: relative;
 }
-.main-section-1 .main-info-area li {
-  vertical-align: text-top;
-  display: flex;
-  align-items: center;
-}
-.main-section-1 .info-link {
-  position: absolute;
-  top: 0px;
-  right: 0;
-  margin: auto;
-  font-size: 26px;
-  text-align: center;
-}
-.main-section-1 .info-link ul {
+.slide-bottom .main-info-area {
   display: flex;
 }
-.main-section-1 .info-link ul li {
-  margin-left: 32px;
+.slide-bottom .main-info-area li {
+  margin-right: 130px;
 }
-.main-section-1 .info-link ul li::after {
-  content: "";
+.slide-bottom .main-info-area li .info-tit {
+  font-size: 24px;
+}
+.slide-bottom .main-info-area li .info-tit i {
+  margin-right: 4px;
+}
+.slide-bottom .main-info-area li .info-txt {
+  margin-left: 35px;
+  margin-top: 6px;
+  font-size: 16px;
+}
+.slide-bottom .main-info-area li .info-txt span {
   display: block;
-  width: 120px;
-  height: 3px;
-  background-color: #000000;
-  margin-top: 38px;
+  font-size: 16px;
+  color: #767676;
 }
-.main-section-1 .info-link ul li:hover a {
-  color: #0068f9;
+.slide-bottom .info-badge {
+  position: absolute;
+  top: 40px;
+  right: 0;
 }
-.main-section-1 .info-link ul li:hover::after {
-  background: #0068f9;
+.slide-bottom .info-badge a {
+  min-width: 123px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5px;
+  border: 1.5px solid #000;
+  transition: all 0.3s;
+}
+.slide-bottom .info-badge a:hover {
+  background: #000;
+  color: #fff;
+  border: 1.5px solid transparent;
 }
 
-.info-tit {
-  margin-right: 30px;
-}
-.info-tit .info-txt {
-  display: flex;
-}
-
-.main-section-2 {
+.main-section-1 {
   margin-top: 100px;
   position: relative;
 }
-.main-section-2 h2 {
+.main-section-1 h2 {
   font-size: 40px;
 }
-.main-section-2 .exhivition-con {
+.main-section-1 .exhivition-con {
   margin-top: 70px;
   display: flex;
 }
-.main-section-2 .exhivition-con .con-img {
+.main-section-1 .exhivition-con .con-img {
   width: 30%;
   height: 400px;
   display: block;
+  position: relative;
 }
-.main-section-2 .exhivition-con .con-img img {
+.main-section-1 .exhivition-con .con-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #f3f3f3;
 }
-.main-section-2 .exhivition-con .txt-box {
+.main-section-1 .exhivition-con .txt-box {
   width: 80%;
   margin-left: 200px;
   display: block;
 }
-.main-section-2 .exhivition-con .txt-box li {
+.main-section-1 .exhivition-con .txt-box li {
   position: relative;
   margin-bottom: 60px;
 }
-.main-section-2 .exhivition-con .txt-box li .badge {
+.main-section-1 .exhivition-con .txt-box li a {
+  font-size: 24px;
+  font-weight: 600;
+}
+.main-section-1 .exhivition-con .txt-box li a:hover {
+  text-decoration: underline;
+}
+.main-section-1 .exhivition-con .txt-box li p {
+  position: absolute;
+  top: 44px;
+  left: 114px;
+  font-size: 20px;
+}
+
+.badge {
   font-size: 15px;
   display: inline-block;
   min-width: 73px;
@@ -464,16 +482,6 @@ legend {
   width: auto;
   margin-right: 30px;
 }
-.main-section-2 .exhivition-con .txt-box li a {
-  font-size: 24px;
-  font-weight: 600;
-}
-.main-section-2 .exhivition-con .txt-box li p {
-  position: absolute;
-  top: 44px;
-  left: 114px;
-  font-size: 20px;
-}
 
 .circle-text {
   width: 100%;
@@ -482,7 +490,7 @@ legend {
 .circle-text .rotating-text2 {
   position: absolute;
   bottom: -100px;
-  right: 0;
+  right: -50px;
   animation: rotate 10s linear infinite;
   transform-origin: 50% 50%;
   transition: all 1s;
@@ -502,10 +510,14 @@ legend {
   zoom: 1;
 }
 
-.main-section-3 {
-  width: 100%;
+.main-section-2 {
   margin-top: 100px;
   height: 900px;
   background-color: #20231f;
   overflow: visible;
+}
+.main-section-2 h2 {
+  padding-top: 100px;
+  color: #fff;
+  font-size: 40px;
 }/*# sourceMappingURL=comm.css.map */
