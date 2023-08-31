@@ -283,6 +283,13 @@ legend {
   justify-content: center;
   align-items: center;
 }
+.swiper-slide .main-slide-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .main_slider .swiper-container::before,
 .main_slider .swiper-container::after {
@@ -303,38 +310,32 @@ legend {
   left: 100%;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.swiper-pagination {
+.swiper-slide .swiper-pagination {
   position: absolute;
   left: 50%;
   bottom: 10px;
   transform: translate(-50%, 0);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
+.mainswiper-button-next,
+.mainswiper-button-prev {
   width: 50px;
   height: 50px;
   background-image: url(/html-mimesis/images/화살표버튼오른쪽.svg);
-  background-size: 70px 70px;
+  background-size: 50px 50px;
   z-index: 1000;
 }
 
-.swiper-button-prev,
+.mainswiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
   transform: scaleX(-1);
+  top: 50%;
   left: -50px;
 }
 
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
+.mainswiper-button-next,
+.swiper-container-rtl .mainswiper-button-prev {
+  top: 50%;
   right: -50px;
 }
 
@@ -594,7 +595,7 @@ legend {
 
 .main-section-3 {
   width: 100%;
-  margin-top: 128px;
+  margin: 128px 0;
 }
 .main-section-3 .inner {
   display: flex;
@@ -618,11 +619,6 @@ legend {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.main-section-3 .inner .vr-tour .more {
-  position: absolute;
-  top: 30px;
-  right: 0;
 }
 .main-section-3 .inner .notice {
   width: 45%;
@@ -664,28 +660,171 @@ legend {
 .main-section-3 .inner .notice .lst-bbs a em {
   color: #8f918f;
 }
-.main-section-3 .inner .notice .more {
+
+.more {
   position: absolute;
   top: 30px;
   right: 0;
 }
-
-.main {
-  width: 100%;
-  height: 1200px;
-  background-color: #ea6565;
+.more a {
+  display: flex;
+  align-items: center;
+}
+.more a .material-symbols-outlined {
+  position: relative;
+  top: 1px;
+  font-weight: lighter;
 }
 
-.slider-about {
+.main-img {
+  width: 100%;
+  height: 800px;
+  background: url(/html-mimesis/images/contents/about-main.jpg) 0 0/cover no-repeat;
+}
+
+.main-desc {
   width: 100%;
   height: 500px;
-  background-color: #ad5656;
+  padding: 100px 0;
+  background-color: rgba(32, 35, 31, 0.5);
+  color: #fff;
+  text-align: center;
+}
+.main-desc h2 {
+  font-size: 40px;
+}
+.main-desc p {
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.about-slider {
+  width: 100%;
+  padding: 230px 0;
+  position: relative;
+}
+.about-slider::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  background: url(/html-mimesis/images/contents/circle-txt.png) no-repeat 0 0;
+}
+
+.about-swiper-container {
+  position: relative;
+  max-width: 1280px;
+  height: 480px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 60%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 0);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-image: url(/html-mimesis/images/화살표버튼오른쪽.svg);
+  background-size: 70px 70px;
+  z-index: 1000;
+}
+
+.swiper-button-prev,
+.about-swiper-container-rtl .swiper-button-next {
+  transform: scaleX(-1);
+  left: 130px;
+}
+
+.swiper-button-next,
+.about-swiper-container-rtl .swiper-button-prev {
+  right: 130px;
 }
 
 .section-about {
   width: 100%;
-  height: 500px;
-  background-color: #502828;
+  height: 1600px;
+  display: flex;
+}
+.section-about .aside {
+  width: 20%;
+  padding: 220px 0;
+  background-color: #20231f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.section-about .aside h2 {
+  border-bottom: 2px solid #fff;
+}
+.section-about .aside .aside-img {
+  width: 80%;
+  height: 300px;
+  margin-top: 50px;
+  padding: 0 10px;
+  background: url(/html-mimesis/images/contents/aside.jpg) 0 0/cover no-repeat;
+  border: 2px solid #fff;
+}
+.section-about .aside p {
+  text-align: center;
+  font-size: 14px;
+  padding: 30px 26px;
+  line-height: 1.8;
+}
+.section-about .about-list img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #f3f3f3;
+}
+.section-about .about-list img:hover {
+  transform: scale(1.02);
+}
+.section-about .about-list p {
+  padding: 10px 0 80px;
+  font-size: 14px;
+}
+
+.about-lst-wrap {
+  width: 80%;
+  padding: 60px 40px 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.about-lst-wrap .about-lst1 {
+  width: 30%;
+}
+.about-lst-wrap .about-lst2 {
+  width: 30%;
+}
+.about-lst-wrap .about-lst3 {
+  width: 30%;
 }
 
 /* layout */
@@ -701,19 +840,19 @@ legend {
   margin: 0 auto;
 }
 
-.nav {
+.page_path {
   width: 20%;
   margin-top: 45px;
   margin-bottom: 32px;
 }
-.nav ul {
+.page_path ul {
   display: flex;
 }
-.nav ul li {
+.page_path ul li {
   margin-right: 20px;
   position: relative;
 }
-.nav ul li::after {
+.page_path ul li::after {
   content: "";
   width: 3px;
   height: 3px;
@@ -721,12 +860,15 @@ legend {
   background-color: #8f918f;
   display: block;
   position: absolute;
-  top: 50%;
+  top: 11px;
   right: -10px;
 }
-.nav ul li:last-child::after {
+.page_path ul li:last-child::after {
   display: none;
 }
-.nav ul li a {
+.page_path ul li a {
   color: #8f918f;
+}
+.page_path ul li a .material-symbols-outlined {
+  font-weight: lighter;
 }/*# sourceMappingURL=comm.css.map */

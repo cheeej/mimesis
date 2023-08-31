@@ -1,5 +1,5 @@
 @charset "UFT-8";
-@import "reset", "main", "contents";
+@import "reset", "main", "contents", "info";
 
 /* layout */
 // body {
@@ -16,7 +16,7 @@
     margin: 0 auto;
 }
 
-.nav {
+.page_path {
     width: 20%;
     margin-top: 45px;
     margin-bottom: 32px;
@@ -35,7 +35,7 @@
                 background-color: #8f918f;
                 display: block;
                 position: absolute;
-                top: 50%;
+                top: 11px;
                 right: -10px;
             }
             &:last-child {
@@ -45,6 +45,9 @@
             }
             a {
                 color: #8f918f;
+                .material-symbols-outlined {
+                    font-weight: lighter;
+                }
             }
         }
     }

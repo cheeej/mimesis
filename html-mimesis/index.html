@@ -26,9 +26,10 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
         />
+
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
 
@@ -60,14 +61,24 @@
                 <div class="main_slider">
                     <div class="swiper-container">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide"><img src="./images/main/mainslide1.jpg" alt="slide1" /></li>
-                            <li class="swiper-slide"><img src="./images/main/mainslide2.jpg" alt="slide2" /></li>
-                            <li class="swiper-slide"><img src="./images/main/mainslide3.jpg" alt="slide3" /></li>
-                            <li class="swiper-slide"><img src="./images/main/mainslide1.jpg" alt="slide1" /></li>
-                            <li class="swiper-slide"><img src="./images/main/mainslide2.jpg" alt="slide2" /></li>
+                            <li class="swiper-slide">
+                                <img src="./images/main/mainslide1.jpg" alt="slide1" class="main-slide-img" />
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./images/main/mainslide2.jpg" alt="slide2" class="main-slide-img" />
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./images/main/mainslide3.jpg" alt="slide3" class="main-slide-img" />
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./images/main/mainslide1.jpg" alt="slide1" class="main-slide-img" />
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="./images/main/mainslide2.jpg" alt="slide2" class="main-slide-img" />
+                            </li>
                         </ul>
-                        <div class="swiper-button-prev blind">이전</div>
-                        <div class="swiper-button-next blind">다음</div>
+                        <div class="mainswiper-button-prev blind">이전</div>
+                        <div class="mainswiper-button-next blind">다음</div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -87,8 +98,8 @@
                             clickable: true,
                         },
                         navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
+                            nextEl: ".mainswiper-button-next",
+                            prevEl: ".mainswiper-button-prev",
                         },
                     });
                 </script>
@@ -265,6 +276,8 @@
                         asNavFor: ".slider-for",
                         dots: false,
                         centerMode: false,
+                        autoplay: true,
+                        autoplaySpeed: 2000,
                         centerPadding: "20px",
                         focusOnSelect: true,
                     });
@@ -280,7 +293,7 @@
                             <div class="more">
                                 <a href="#">
                                     <span>자세히보기</span>
-                                    <i class="fa fa-chevron-right"></i>
+                                    <span class="material-symbols-outlined"> chevron_right </span>
                                 </a>
                             </div>
                         </div>
@@ -315,7 +328,7 @@
                             <div class="more">
                                 <a href="#">
                                     <span>자세히보기</span>
-                                    <i class="fa fa-chevron-right"></i>
+                                    <span class="material-symbols-outlined"> chevron_right </span>
                                 </a>
                             </div>
                         </div>
